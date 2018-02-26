@@ -515,7 +515,7 @@ def process_doc(filepath):
             # this direntry is not part of the tree --> unused or orphan
             direntry = ole._load_direntry(sid)
         is_stream = direntry.entry_type == olefile.STGTY_STREAM
-        log.debug('direntry {:2d} {}: {}'
+        log.debug(u'direntry {:2d} {}: {}'
                   .format(sid, '[orphan]' if is_orphan else direntry.name,
                           'is stream of size {}'.format(direntry.size)
                           if is_stream else
